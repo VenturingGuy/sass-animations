@@ -1,0 +1,43 @@
+.lotus {
+    width: 300px;
+    height: 300px;
+    border: 1px solid;
+    position: relative;
+}
+
+.lotus > div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    border-radius: 0 70% 50% 70%;
+    left: 0;
+    top: 50px;
+    transform: rotate(45deg);
+    transform-origin: 150px 150px;
+}
+
+.lotus > div:nth-child(1) {
+    background-color: rgba(223, 29, 29, 0.5);
+    transform: rotate(-45deg);
+}
+
+.lotus > div:nth-child(2) {
+    background-color: rgba(216, 177, 3, 0.5);
+    transform: rotate(0);
+}
+
+.lotus > div:nth-child(3) {
+    background-color: rgba(33, 224, 33, 0.5);
+    transform: rotate(45deg);
+}
+
+.lotus > div:nth-child(4) {
+    background-color: rgba(18, 228, 228, 0.5);
+    transform: rotate(90deg);
+}
+
+.lotus > div:nth-child(5) {
+    background-color: rgba(25, 0, 255, 0.5);
+    transform: rotate(135deg);
+}
