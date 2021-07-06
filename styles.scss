@@ -7,6 +7,7 @@ $lotus-color2: rgba(216, 177, 3, 0.5);
 $lotus-color3: rgba(33, 224, 33, 0.5);
 $lotus-color4: rgba(18, 228, 228, 0.5);
 $lotus-color5: rgba(25, 0, 255, 0.5);
+$colors: $lotus-color1, $lotus-color2, $lotus-color3, $lotus-color4, $lotus-color5;
 
 .lotus {
     width: $size;
@@ -26,36 +27,16 @@ $lotus-color5: rgba(25, 0, 255, 0.5);
         transform-origin: $size * .5 $size * .5;
         animation-duration: 6000ms;
         animation-fill-mode: forwards;
-    }
-
-    & > div:nth-child(1) {
-        background-color: $lotus-color1;
-        animation-name: bloom-1;
-    }
-
-    & > div:nth-child(2) {
-        background-color: $lotus-color2;
-        animation-name: bloom-2;
-    }
-    
-    & > div:nth-child(3) {
-        background-color: $lotus-color3;
-    }
-    
-    & > div:nth-child(4) {
-        background-color: $lotus-color4;
-        animation-name: bloom-4;
-    }
-    
-    & > div:nth-child(5) {
-        background-color: $lotus-color5;
-        animation-name: bloom-5;
-    }  
+    } 
 }
 
 
 
 @for $n from 1 through 5 {
+    .lotus > div:nth-child(#{$n}) {
+        background-color: nth($colors, $n);
+        animation-name: bloom-#{$n};
+    }
     @keyframes bloom-#{$n} {
         0% {
             transform: rotate($base-angle);

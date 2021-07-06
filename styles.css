@@ -17,24 +17,10 @@
   animation-duration: 6000ms;
   animation-fill-mode: forwards;
 }
+
 .lotus > div:nth-child(1) {
   background-color: rgba(223, 29, 29, 0.5);
   animation-name: bloom-1;
-}
-.lotus > div:nth-child(2) {
-  background-color: rgba(216, 177, 3, 0.5);
-  animation-name: bloom-2;
-}
-.lotus > div:nth-child(3) {
-  background-color: rgba(33, 224, 33, 0.5);
-}
-.lotus > div:nth-child(4) {
-  background-color: rgba(18, 228, 228, 0.5);
-  animation-name: bloom-4;
-}
-.lotus > div:nth-child(5) {
-  background-color: rgba(25, 0, 255, 0.5);
-  animation-name: bloom-5;
 }
 
 @keyframes bloom-1 {
@@ -45,6 +31,11 @@
     transform: rotate(-45deg);
   }
 }
+.lotus > div:nth-child(2) {
+  background-color: rgba(216, 177, 3, 0.5);
+  animation-name: bloom-2;
+}
+
 @keyframes bloom-2 {
   0% {
     transform: rotate(45deg);
@@ -53,6 +44,11 @@
     transform: rotate(0deg);
   }
 }
+.lotus > div:nth-child(3) {
+  background-color: rgba(33, 224, 33, 0.5);
+  animation-name: bloom-3;
+}
+
 @keyframes bloom-3 {
   0% {
     transform: rotate(45deg);
@@ -61,6 +57,11 @@
     transform: rotate(45deg);
   }
 }
+.lotus > div:nth-child(4) {
+  background-color: rgba(18, 228, 228, 0.5);
+  animation-name: bloom-4;
+}
+
 @keyframes bloom-4 {
   0% {
     transform: rotate(45deg);
@@ -69,6 +70,11 @@
     transform: rotate(90deg);
   }
 }
+.lotus > div:nth-child(5) {
+  background-color: rgba(25, 0, 255, 0.5);
+  animation-name: bloom-5;
+}
+
 @keyframes bloom-5 {
   0% {
     transform: rotate(45deg);
