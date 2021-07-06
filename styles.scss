@@ -53,42 +53,16 @@ $lotus-color5: rgba(25, 0, 255, 0.5);
     }  
 }
 
-@keyframes bloom-1 {
-    0% {
-        transform: rotate($base-angle);
-    }
 
-    100% {
-        transform: rotate(-$base-angle);
-    }
-}
 
-@keyframes bloom-2 {
-    0% {
-        transform: rotate($base-angle);
-    }
-
-    100% {
-        transform: rotate(0);
-    }
-}
-
-@keyframes bloom-4 {
-    0% {
-        transform: rotate($base-angle);
-    }
-
-    100% {
-        transform: rotate($base-angle * 2);
-    }
-}
-
-@keyframes bloom-5 {
-    0% {
-        transform: rotate($base-angle);
-    }
-
-    100% {
-        transform: rotate($base-angle * 3);
+@for $n from 1 through 5 {
+    @keyframes bloom-#{$n} {
+        0% {
+            transform: rotate($base-angle);
+        }
+    
+        100% {
+            transform: rotate(($n - 2) * $base-angle);
+        }
     }
 }
