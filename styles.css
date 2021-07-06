@@ -12,32 +12,73 @@
     border: 1px solid;
     border-radius: 0 70% 50% 70%;
     left: 0;
-    top: 50px;
+    top: 70px;
     transform: rotate(45deg);
     transform-origin: 150px 150px;
+    animation-duration: 6000ms;
+    animation-fill-mode: forwards;
 }
 
 .lotus > div:nth-child(1) {
     background-color: rgba(223, 29, 29, 0.5);
-    transform: rotate(-45deg);
+    animation-name: bloom-1;
 }
 
 .lotus > div:nth-child(2) {
     background-color: rgba(216, 177, 3, 0.5);
-    transform: rotate(0);
+    animation-name: bloom-2;
 }
 
 .lotus > div:nth-child(3) {
     background-color: rgba(33, 224, 33, 0.5);
-    transform: rotate(45deg);
 }
 
 .lotus > div:nth-child(4) {
     background-color: rgba(18, 228, 228, 0.5);
-    transform: rotate(90deg);
+    animation-name: bloom-4;
 }
 
 .lotus > div:nth-child(5) {
     background-color: rgba(25, 0, 255, 0.5);
-    transform: rotate(135deg);
+    animation-name: bloom-5;
+}
+
+@keyframes bloom-1 {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes bloom-2 {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes bloom-4 {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes bloom-5 {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(135deg);
+    }
 }
